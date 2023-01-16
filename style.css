@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body,head{
+    overflow: hidden;
+}
+.navbar{
+    background-color: rgb(22, 7, 36);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 11rem;
+}
+.left h1{
+    font-size: 2.9rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #fff;
+}
+.list li a{
+    /* display: inline-block; */
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: 200;
+    transition: all 0.3s;
+}
+.list li{
+    list-style: none;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5rem;
+
+}
+.list li a:hover{
+    color: rgb(22, 7, 36);
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.right{
+    display: flex;
+    /* align-items: center; */
+}
+.menu{
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+}
+.menu{
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+}
+.mobile{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.menu[name="close"]{
+    display: none;
+}
+.navbar{
+    position: relative;
+}
+@media(max-width: 62em){
+    .right{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(22, 7, 36);
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+        transition: all 1s linear;
+        align-items: center;
+    }
+
+    .mobile{
+        display: block;
+        z-index: 999;
+    }
+
+    .list{
+        align-items: center;
+        flex-direction: column;
+    }
+    .active .right{
+        transform: translateX(0%);
+    }
+    .active .menu[name="close"]{
+        display: block;
+    }
+    .active .menu[name="menu"]{
+        display: none;
+    }
+    .left{
+        display: block;
+        z-index: 999;
+    }
+    .left h1{
+        font-size: 2.4rem;
+    }
+}
+@media(max-width:94em){
+    .navbar{
+        padding: 1.6rem 7rem;
+    }
+    .list{
+        gap: 3rem;
+    }
+}
+@media(max-width:41em){
+    .navbar{
+        padding: 1.6rem 3rem;
+    }
+}
+@media(max-width:25em) {
+    .navbar {
+        padding: 1.6rem 1.4rem;
+    }
+}
